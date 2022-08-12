@@ -10,6 +10,7 @@ import Foundation
 class RecipeModel: ObservableObject {
     
     @Published var recipies = [Recipe]()
+    @Published var tabIndex = 0;
     
     init() {
         let service = DataService()
