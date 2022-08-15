@@ -9,11 +9,11 @@ import SwiftUI
 
 struct RecipeListView: View {
     
-    @ObservedObject var viewModel = RecipeModel()
+    @EnvironmentObject var model:RecipeModel
     
     var body: some View {
         NavigationView {
-            List(viewModel.recipies){ r in
+            List(model.recipies){ r in
                 NavigationLink(
                     destination: RecipeDetailView(recipe: r),
                     label: {
